@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    nacos:
+      server-addr: sdadgz.cn:8849
+      username: nacos
+      password: sdadgz.cn
+      config:
+        namespace: test
+        file-extension: yaml
+        shared-configs:
+          - { dataId: spring-cloud-mysql8.yaml, refresh: true }
+          - { dataId: spring-cloud-seata.yaml, refresh: true }
+  application:
+    name: demo-02

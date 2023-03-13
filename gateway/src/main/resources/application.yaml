@@ -1,0 +1,34 @@
+server:
+  port: 12000
+spring:
+  cloud:
+    nacos:
+      discovery:
+        namespace: test
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - OPTION
+              - DELETE
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+
+#    gateway:
+#      discovery:
+#        locator:
+#          enabled: true
+#    gateway:
+#      routes:
+#        - id: config_route
+#          uri: lb://config # 负载均衡nacos
+#          predicates:
+#            - Path=/config/**
+#          filters:
+#            - StripPrefix=1

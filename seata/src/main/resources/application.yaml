@@ -1,0 +1,7 @@
+server:
+  port: 11000
+spring:
+  cloud:
+    nacos:
+      discovery:
+        namespace: test

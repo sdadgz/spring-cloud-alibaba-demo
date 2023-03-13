@@ -1,0 +1,20 @@
+server:
+  port: 10000
+spring:
+  cloud:
+    nacos:
+      discovery:
+        namespace: test
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8080
+      web-context-unify: false
+      datasource:
+        flow-rule:
+          nacos:
+            serverAddr: sdadgz.cn:8849
+            username: nacos
+            password: sdadgz.cn
+            dataId: sentinel-service-flow-rule
+            namespace: test
+            ruleType: flow
